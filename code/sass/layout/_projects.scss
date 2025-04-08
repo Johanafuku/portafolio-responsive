@@ -1,0 +1,157 @@
+.projects {
+    margin-top: 80px;
+
+    @include breakpoint(tablet){
+        margin-top: 30px;
+    }
+
+    @include breakpoint(desktopxl){
+        margin-top: 60px;
+    }
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @include breakpoint(tablet){
+            align-items: center;
+        }
+        
+        h2 {
+            font-size: 40px;
+            @include breakpoint(tablet){
+                font-size: 71px;
+            }
+            @include breakpoint(desktopxl){
+                font-size: 87px;
+            }
+        }
+
+        a {
+            @include link();
+            padding-top: 10px;
+        }
+        a:hover {
+            color: $light-green;
+        }
+    }
+
+    &-information {
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap:20px;
+        }
+
+        @include breakpoint(desktopxl){
+            column-gap: 30px;
+        }
+    }
+
+    &-detail {
+        
+        @include breakpoint(tablet){
+            max-width: 334px;
+        }
+
+        @include breakpoint(desktopxl){
+            max-width: 532px;
+            margin-bottom: 69px;
+            height: 482px;
+        }
+
+        .projects-detail-link-desktop {
+            display: none;
+        }
+
+        .img-wrapper {
+            @include breakpoint(desktopxl){
+
+                height: 399px;
+                &:hover .img-portafolio {
+                    filter: brightness(30%);
+                   
+                }
+
+                &:hover .projects-detail-link-desktop {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    position: relative;
+                    align-items: center;
+                    top: -240px;
+                   
+                }
+
+            }
+
+            a {
+                @include link();
+                padding-bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+
+        .img-portafolio {
+            max-width: 100%;
+
+                    
+        }
+        
+        h3 {
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 490;
+            line-height: 32px;
+        }
+        .detail-data {
+            display: flex;
+            gap: 10px;
+            p {
+                margin-top: 8px;
+                text-transform: uppercase;
+                
+            }
+
+          
+        }
+        
+    }
+
+    &-detail-link {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        display: flex;
+        gap: 30px;
+
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+
+        a {
+            @include link();
+        }
+        a:hover {
+            color: $light-green;
+        }
+
+     
+    }
+
+    &::before {
+        content: "";
+        background-image: url("/img/projects-circles.svg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 1320px;
+        left: 230px;
+
+        @include breakpoint(desktopxl){
+            display: none;
+        }
+    }
+}

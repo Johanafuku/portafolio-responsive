@@ -1,0 +1,118 @@
+form {
+    margin-top: 50px;
+
+    @include breakpoint(desktopxl){
+        margin-top: 0px;
+    }
+    
+    fieldset {
+        border: none;
+
+        p {
+            @include breakpoint(desktopxl){
+                padding-bottom: 10px;
+            }
+        }
+
+        input {
+            padding-bottom: 10px;
+            background-color: transparent;
+            border-right: 1px solid $grey;
+            color: $white;
+            width: 100%;
+            font-size: 16px;
+
+            &::placeholder {
+                font-size: 16px;
+                padding-left: 25px;
+                font-weight: 500;
+                font-family: $primary-font;
+            }
+            
+        }
+       
+
+        input:focus {
+            outline: none;
+            border-bottom: 1px solid $light-green;
+        }
+
+        .error-message {
+            color: $red;
+            font-size: 12px;
+            text-align: right;
+            display: none;
+        }
+
+        .error-icon {
+            display: none;
+
+            @include breakpoint(desktopxl){
+                position: relative;
+                top: -50px;
+                left: 450px;
+                height: 0px;
+            }
+        }
+
+        input:invalid {
+            border-bottom: 1px solid $red;
+        
+
+        }
+        
+
+        textarea {
+            background-color: transparent;
+            border: none;
+            color: $white;
+            width: 100%;
+           
+
+            &::placeholder {
+                font-size: 16px;
+                padding-left: 25px;
+                font-weight: 500;
+                font-family: $primary-font;
+            }
+        }
+
+        textarea:focus {
+            outline: none;
+            border: 1px solid $light-green;
+            
+        }
+        textarea {
+            border-bottom: 1px solid $light-grey;
+        }
+      
+        
+        .form-button {
+            display: flex;
+            justify-content: right;
+
+            .button-send {
+                border: none;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 16px;
+                background-color: transparent;
+                padding-top: 40px;
+                letter-spacing: 2.29px;
+                font-weight: 600;
+                text-decoration: underline;
+                text-decoration-color: $light-green;
+                text-underline-offset: 24px;
+                text-decoration-thickness: 3px;
+            }
+
+            .button-send:hover {
+                color: $light-green;
+            }
+            
+            
+        }
+    }
+
+    
+}

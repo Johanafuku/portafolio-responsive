@@ -1,0 +1,40 @@
+@mixin breakpoint($bp) {
+
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  } 
+  
+@if $bp == tablethorizontal {
+  @media (min-width: $bp-tablet-horizontal) {
+    @content;
+    }
+  } 
+
+@if $bp == desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+} 
+
+@if $bp == desktopxl {
+  @media (min-width: $bp-desktop-xl) {
+    @content;
+}
+} 
+}
+
+
+
+@mixin link(){
+  color: $white;
+  text-transform: uppercase;
+  text-underline-offset: 16px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: $light-green;
+  font-weight: 500;
+  letter-spacing: 2.29px;
+  font-size: 16px;
+ 
+}

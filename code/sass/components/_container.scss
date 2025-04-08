@@ -1,0 +1,29 @@
+.container {
+    margin-top: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 80px;
+
+    @include breakpoint(tablet){
+        margin-left: 32px;
+        margin-right: 30px;
+    }
+
+    @include breakpoint(desktopxl){
+        margin-left: 165px;
+        margin-right: 165px;
+
+    }
+  
+}
+
+.container-grey {
+    background-color: $grey;
+    padding-top: 10px;
+    padding-bottom: 60px;
+
+    @include breakpoint(tablet){
+        padding-bottom: 0px;
+    }
+  
+}

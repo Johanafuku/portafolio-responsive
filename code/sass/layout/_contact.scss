@@ -1,0 +1,79 @@
+.contact {
+    margin-top: 60px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-bottom: 130px;
+    border-bottom: 1px solid $light-grey;
+    
+    @include breakpoint(tablet){
+        margin-left: 162px;
+        margin-right: 161px;
+        border-bottom: none;
+        padding-bottom: 105px;
+    }
+
+    @include breakpoint(desktopxl){
+        display: flex;
+        gap: 220px;
+        align-items: start;
+        .contact-container {
+            width: 45%;
+        }
+      
+    }
+
+    h3 {
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: -1.14px;
+        font-weight: 500;
+        @include breakpoint(tablet){
+            font-size: 71px;
+            font-weight: 600;
+        }
+
+        @include breakpoint(desktopxl){
+            font-size: 88px;
+            text-align: left;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 17.7px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+        @include breakpoint(tablet){
+            text-align: center;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 300;
+        }
+
+        @include breakpoint(desktopxl){
+            text-align: left;
+        }
+    }
+
+    &::before {
+        content: "";
+        background-image: url("/img/footer-circles.svg");
+        background-repeat: no-repeat;
+        width: 339px;
+        height: 135px;
+        position: absolute;
+        z-index: 3;
+        top: 4734px;
+        left: -107px;
+
+        @include breakpoint(tablet){
+            top: 3150px;
+            left: -165px;
+        }
+        @include breakpoint(desktopxl){
+            top: 3490px;
+            left: 0px;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.experience {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid $light-grey;
+    border-bottom: 2px solid $light-grey;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include breakpoint(tablet){
+        border-bottom: none;
+    }
+
+    @include breakpoint(desktopxl){
+        margin-top: 219px;
+        padding-top: 62px;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("/img/section-experience-circle.svg");
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 150px;
+        position: absolute;
+        left: 230px;
+        top: 1323px;
+
+        @include breakpoint(tablet){
+            top: 1010px;
+            left: 570px;
+        }
+
+        @include breakpoint(desktopxl){
+            left: 1133px;
+            width: 306px;
+            top: 1077px;
+        }
+        
+    }
+
+
+    @include breakpoint(tablet){
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+       
+    }
+
+    &-program {
+        margin-bottom: 24px;
+        width: 315px;
+
+        @include breakpoint(desktopxl){
+            width: 345px;
+        }
+
+        h2 {
+            text-align: center;
+            @include breakpoint(tablet){
+                font-size: 48px;
+                text-align: left;
+            }
+        }
+
+        p {
+            margin-top: 5px;
+            text-align: center;
+            @include breakpoint(tablet){
+                font-size: 18px;
+                text-align: left;
+            }
+            @include breakpoint(desktopxl){
+                margin-top: 14px;
+            }
+        }
+    }
+
+   
+}

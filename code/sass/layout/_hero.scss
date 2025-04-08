@@ -1,0 +1,227 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include breakpoint(tablet){
+        display: grid;
+        gap: 0px;
+        grid-template-areas: 
+        "info img"
+        "info img"
+        "info img";
+    }
+
+
+    &-img {
+        max-height: 340px;
+        @include breakpoint(tablet){
+            grid-area: img;
+        }
+        .img-mobile {
+            position: relative;
+            max-width: 195px;
+            left: 93px;
+            top: -125px;
+            margin: 0px;
+
+            @include breakpoint(tablet){
+                display: none;
+            }
+        }
+        
+        .img-tablet {
+            display: none;
+            @include breakpoint(tablet){
+                display: block;
+                max-width: 322px;
+                position: relative;
+                top: -75px;
+                left: 30px;
+                z-index: -1;
+            
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+            }
+        }
+
+        .img-desktop {
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+                position: relative;
+                z-index: -1;
+                max-width: 445px;
+                height: 720px;
+                top: -90px;
+            }
+        }
+    }
+
+    &-img::before {
+        content: "";
+        position: absolute;
+        background-image: url("/img/circle.svg");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 130px;
+        left: 350px;
+        top: 300px;
+
+        @include breakpoint(tablet){
+            top: 475px;
+            left: 690px;
+        }
+
+        @include breakpoint(desktopxl){
+            left: 750px;
+            top: 515px;
+        }
+    }
+
+    &-img::after {
+        content: "";
+        position: absolute;
+        background-image: url("/img/circle-hero.svg");
+        width: 104%;
+        z-index: -1;
+        height: 130px;
+        top: 153px;
+        left: -227px;
+        background-repeat: no-repeat;
+
+        @include breakpoint(tablet){
+            top: 88px;
+            left: -175px;
+        }
+        @include breakpoint(desktopxl){
+            top: 155px;
+            left: 0px;
+            height: 250px;
+        }
+    
+    }
+
+
+    /*hero-information*/
+    &-information {
+        @include breakpoint(tablet){
+            grid-area: info;
+        }
+        .hero-title {
+            color: $white;
+            font-size: 40px;
+            text-align: center;
+            @include breakpoint(tablet){
+                margin-top: 75px;
+                font-size: 71px;
+                text-align: left;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+                font-weight: 600;
+
+                .text-part {
+                    position: absolute;
+                    top: 228px;
+                    left: 365px;
+                }
+            }
+
+            @include breakpoint(desktopxl){
+                margin-top: 127px;
+                font-size: 86px;
+                width: 125%;
+                line-height: 86px;
+                letter-spacing: -2.5px;
+
+                .text-part {
+                    position: initial;
+                }
+            }
+            
+            .text-name {
+                text-decoration: underline;
+                text-decoration-color: $light-green;
+                text-underline-offset: 10px;
+                text-decoration-thickness: 5px;
+
+                @include breakpoint(tablet){
+                    position: absolute;
+                    width: 450px;
+                    top: 314px;
+                    left: 30px;
+                    text-underline-offset: 16px;
+                  
+                }
+
+                @include breakpoint(desktopxl){
+                    position: initial;
+                    text-underline-offset: 19px;
+                }
+
+                }
+            
+            .dot {
+                @include breakpoint(tablet){
+                    position: absolute;
+                    top: 314px;
+                    left: 425px;
+                }
+
+                @include breakpoint(desktopxl){
+                    position: initial;
+                }
+            }
+            
+
+        }
+       
+
+        .hero-text {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: 16px;
+            text-align: justify;
+            line-height: 26px;
+
+            @include breakpoint(tablet){
+                margin-top: 140px;
+                text-align: left;
+                line-height: 28px;
+                font-weight: 400;
+                font-size: 17.7px;
+                width: 107%;
+            }
+
+            @include breakpoint(desktopxl){
+                margin-top: 43px;
+                font-size: 18px;
+                line-height: 28px;
+                max-width: 65%;
+            }
+        
+        }
+
+        .hero-link {
+            @include link();
+            display: block;
+            text-align: center;
+            
+            @include breakpoint(tablet){
+                text-align: left;
+                padding-top: 20px;
+            }
+
+            @include breakpoint(desktopxl){
+                padding-top: 66px;
+            }
+        }
+
+        .hero-link:hover {
+            color: $light-green;
+        }
+    }
+
+   }
+

@@ -1,0 +1,49 @@
+.footer {
+    background-color: $grey;
+   
+
+    &-logo {
+        width: 129px;
+        @include breakpoint(tablet){
+            width: 165px;
+        }
+    }
+
+    &-icon {
+        width: 39.69px;
+        padding: 10px;
+        @include breakpoint(tablet){
+            width: 42px;
+        }
+        &:hover {
+            filter: invert(44%) sepia(39%) saturate(538%) hue-rotate(108deg) brightness(90%) contrast(91%);
+
+        }
+    }
+
+   
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 60px;
+
+        @include breakpoint(tablet){
+            margin-left: 32px;
+            margin-right: 31px;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: 1px solid $light-grey;
+            padding-top: 30px;
+            padding-bottom: 32px;
+            
+        }
+
+        @include breakpoint(desktopxl){
+            margin-left: 165px;
+            margin-right: 165px;
+        }
+    }
+}
