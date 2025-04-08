@@ -5,16 +5,17 @@ This is a new responsive project using the strategy "mobile first", HTML, Sass a
 # Preview:
 
 ## Mobile:
-![iphone](/code/img/preview-mobile.png)
+<img src="code/img/preview-mobile.png" alt="image" width="200" height="auto">
+
 
 ## Tablet:
-![tablet](/code/img/preview-tablet.png)
+<img src="code/img/preview-tablet.png" alt="image" width="300" height="auto">
 
 ## Desktop:
-![desktop](/code/img/preview-desktop.png)
+<img src="code/img/preview-desktop.png" alt="image" width="300" height="auto">
 
 ### desktop active:
-![desktop-active](/code/img/preview-desktop-active.png)
+<img src="code/img/preview-desktop-active.png" alt="image" width="300" height="auto">
 # Features :key:
 
 1. The breakpoints are:
@@ -43,16 +44,17 @@ Este es un proyecto responsive usando la estrategia "mobile first", HTML, Sass y
 # Preview:
 
 ## Celular:
-![iphone](/code/img/preview-mobile.png)
+<img src="code/img/preview-mobile.png" alt="image" width="200" height="auto">
+
 
 ## Tablet:
-![tablet](/code/img/preview-tablet.png)
+<img src="code/img/preview-tablet.png" alt="image" width="300" height="auto">
 
 ## Computadora:
-![desktop](/code/img/preview-desktop.png)
+<img src="code/img/preview-desktop.png" alt="image" width="300" height="auto">
 
 ### Computadora active:
-![desktop-active](/code/img/preview-desktop-active.png)
+<img src="code/img/preview-desktop-active.png" alt="image" width="300" height="auto">
 
 # Características :key:
 
