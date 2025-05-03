@@ -45,6 +45,7 @@
 
         @include breakpoint(desktopxl){
             column-gap: 30px;
+            justify-content: center;
         }
     }
 
